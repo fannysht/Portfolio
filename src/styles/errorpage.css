@@ -1,4 +1,3 @@
-
 .error-page {
   background: var(--color-midc);
   color: var(--color-lightc);
@@ -10,14 +9,20 @@
   text-align: center;
   flex-direction: column;
 }
+
 .error-page img {
-  max-width: 500px;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
 }
+
 .error-page h1 {
   font-size: 5rem;
   font-weight: 700;
   margin-bottom: 20px;
 }
+
 .error-page h2 {
   font-size: 2rem;
   font-weight: 500;
@@ -30,6 +35,7 @@
   max-width: 500px;
   line-height: 1.5;
 }
+
 .error-page .btn-home {
   font-size: 1.1rem;
   padding: 12px 30px;
@@ -40,7 +46,164 @@
   transition: all 0.3s ease;
   text-decoration: none;
 }
+
 .error-page .btn-home:hover {
   background-color: var(--color-lightm);
   color: var(--color-darkm);
+}
+/* Desktop large */
+@media (min-width: 1201px) {
+  .error-page h1 {
+    font-size: 5rem;
+  }
+  .error-page h2 {
+    font-size: 2rem;
+  }
+  .error-page p {
+    font-size: 1.25rem;
+  }
+  .error-page img {
+    max-width: 350px;
+  }
+  .error-page .btn-home {
+    font-size: 1.1rem;
+    padding: 12px 30px;
+  }
+}
+
+/* Desktop standard / laptop */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .error-page h1 {
+    font-size: 4.5rem;
+  }
+  .error-page h2 {
+    font-size: 1.8rem;
+  }
+  .error-page p {
+    font-size: 1.15rem;
+  }
+  .error-page img {
+    max-width: 350px;
+  }
+  .error-page .btn-home {
+    font-size: 1.05rem;
+    padding: 11px 28px;
+  }
+}
+
+/* Tablette paysage */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .error-page {
+    flex-direction: column;
+    padding: 60px 40px;
+  }
+  .error-page h1 {
+    font-size: 3.8rem;
+  }
+  .error-page h2 {
+    font-size: 1.7rem;
+  }
+  .error-page p {
+    font-size: 1.2rem;
+  }
+  .error-page img {
+    max-width: 300px;
+  }
+  .error-page .btn-home {
+    font-size: 1.05rem;
+    padding: 12px 28px;
+  }
+}
+
+/* Tablette portrait / iPad portrait */
+@media (min-width: 601px) and (max-width: 768px) {
+  .error-page {
+    flex-direction: column;
+    padding: 80px 30px;
+    max-width: 100%;
+  }
+  .error-page h1 {
+    font-size: 3.2rem;
+  }
+  .error-page h2 {
+    font-size: 1.5rem;
+  }
+  .error-page p {
+    font-size: 1.1rem;
+  }
+  .error-page img {
+    max-width: 280px;
+  }
+  .error-page .btn-home {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .error-page h1 {
+    font-size: 2.5rem;
+  }
+  .error-page h2 {
+    font-size: 1.3rem;
+  }
+  .error-page p {
+    font-size: 0.95rem;
+  }
+  .error-page img {
+    max-width: 220px;
+  }
+  .error-page .btn-home {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1366px) {
+  .error-page img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* iPad Pro portrait - plus large */
+@media (width: 1024px) and (orientation: portrait) {
+  .error-page {
+    flex-direction: column;
+    padding: 80px 30px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .error-page h1 {
+    font-size: 4.5rem;
+  }
+  .error-page h2 {
+    font-size: 2.2rem;
+  }
+  .error-page p {
+    max-width: 90%;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin: 20px auto 30px;
+  }
+
+  .error-page img {
+    max-width: 40%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .error-page .btn-home {
+    font-size: 1.5rem;
+    padding: 18px 48px;
+    border-radius: 50px;
+    background-color: var(--color-lightc);
+    color: var(--color-darkd);
+    border: none;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
 }

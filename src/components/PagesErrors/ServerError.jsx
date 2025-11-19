@@ -1,13 +1,12 @@
-// src/components/ServerError.jsx
+// Page 500 Server Error
+
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../styles/errorpage.css";
-import serverErrorImg from "../../assets/images/server_error_image.png";
 
 function ServerError() {
   return (
     <section className="error-page">
-      <img src={serverErrorImg} alt="Error 500" />
       <h1>Error 500</h1>
       <h2>Internal Server Error</h2>
       <p>
