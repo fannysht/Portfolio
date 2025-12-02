@@ -1,0 +1,307 @@
+/* =========================================
+            Diplomes page
+   ========================================= */
+
+.dipl-container {
+  background: transparent;
+  max-width: 1200px;
+  width: 80%;
+  margin: 120px auto 35px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* Cartes */
+.dipl-card {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  gap: 20px;
+  opacity: 0;
+  transform: translateY(20px) scale(0.98);
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.dipl-card.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Cartes gauche/droite */
+.dipl-card.left {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+}
+
+.dipl-card.right {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Image */
+.dipl-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 20px;
+  flex-shrink: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  background-color: var(--color-bg);
+}
+
+.dipl-img:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Contenu interne de la carte */
+.dipl-content {
+  position: relative;
+  background-color: var(--color-lightc);
+  padding: 30px 25px;
+  border-radius: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dipl-content:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Date */
+.dipl-date {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-darkd);
+  margin-bottom: 10px;
+  cursor: default;
+}
+
+/* Titres et sous-titre */
+.dipl-title {
+  font-size: 1.5rem;
+  margin: 0 0 8px;
+  cursor: default;
+}
+
+.dipl-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-darkm);
+  margin: 0 0 15px;
+  cursor: default;
+}
+
+/* Texte */
+.dipl-text-option {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-darkm);
+  cursor: default;
+}
+.dipl-text-container {
+  display: flex;
+  flex-direction: column;
+}
+.timeline-title {
+  margin-bottom: 1rem !important;
+  text-align: center;
+}
+.dipl-text-contenu {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-darkm);
+  cursor: default;
+  text-align: justify;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+.dipl-text-contenu::before {
+  content: "➤ ";
+  color: var(--color-primary);
+  margin-right: 8px;
+}
+
+.dipl-text-contenu:hover {
+  transform: translateX(5px);
+}
+
+/* Background */
+
+.animated-bg {
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+}
+
+/* Etoiles */
+#stars-small,
+#stars-medium,
+#stars-large {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#stars-small {
+  width: 4px;
+  height: 4px;
+  box-shadow: 100px 500px #ffffff44, 300px 800px #ffffff33,
+    700px 1200px #ffffff55, 1500px 400px #ffffff33, 1800px 1500px #ffffff22;
+  animation: animStars 50s linear infinite;
+}
+
+#stars-medium {
+  width: 6px;
+  height: 6px;
+  box-shadow: 200px 600px #ffffff55, 500px 1000px #ffffff44,
+    1300px 1100px #ffffff33;
+  animation: animStars 100s linear infinite;
+}
+
+#stars-large {
+  width: 8px;
+  height: 8px;
+  box-shadow: 400px 800px #ffffff66, 900px 1300px #ffffff55,
+    1600px 1400px #ffffff44;
+  animation: animStars 150s linear infinite;
+}
+
+@keyframes fallStar {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translateX(0) translateY(100vh);
+  }
+}
+
+/* =========================================
+                Responsives
+   ========================================= */
+
+@media (max-width: 768px) {
+  .dipl-container {
+    width: 90%;
+    margin-top: 90px;
+    margin-bottom: 15px;
+    gap: 40px;
+    padding: 0;
+  }
+
+  .dipl-card {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .dipl-card.left,
+  .dipl-card.right {
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .dipl-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
+
+  .dipl-content {
+    padding: 20px;
+    width: 95%;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  }
+  .timeline-title {
+    margin-bottom: 1rem !important;
+    text-align: center;
+  }
+  .dipl-date {
+    font-size: 0.9rem;
+  }
+
+  .dipl-title {
+    font-size: 1.25rem;
+  }
+
+  .dipl-subtitle {
+    font-size: 1rem;
+  }
+
+  .dipl-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .btn-dipl-projets {
+    position: static;
+    margin-top: 15px;
+    width: 130px;
+    height: 32px;
+    font-size: 13px;
+    align-self: end;
+  }
+
+  .dipl-content:hover {
+    transform: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .dipl-img:hover {
+    transform: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Très petits écrans (≤ 480px) */
+@media (max-width: 480px) {
+  .dipl-container {
+    margin: 90px auto 15px auto;
+    width: 90%;
+    gap: 30px;
+  }
+
+  .dipl-title {
+    font-size: 1.1rem;
+  }
+
+  .dipl-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .dipl-text {
+    font-size: 0.85rem;
+  }
+
+  .btn-dipl-projets {
+    width: 120px;
+    height: 30px;
+    font-size: 12px;
+  }
+  .timeline-title {
+    margin-bottom: 1rem !important;
+    text-align: center;
+  }
+  .dipl-text-contenu {
+    text-align: start;
+  }
+}

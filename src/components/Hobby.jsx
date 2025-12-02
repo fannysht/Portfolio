@@ -1,6 +1,9 @@
+// Hobby component
+
 import React from "react";
 import "../styles/index.css";
 import { useInView } from "react-intersection-observer";
+import { useTranslation } from "react-i18next";
 
 import hobbyPanda from "../assets/images/Panda-hobby-Dessin.png";
 import musicIcon from "../assets/icons/musique.png";
@@ -12,22 +15,21 @@ import dessinIcon from "../assets/icons/dessin.png";
 import jeuVideoIcon from "../assets/icons/console.png";
 
 export default function HobbyCloud() {
-  // Intersection Observer pour déclencher l'affichage/animation uniquement quand la section est visible
+  const { t } = useTranslation(); // Pour i18
+
   const { ref, inView } = useInView({
-    triggerOnce: true,  // ne se déclenche qu’une seule fois
-    threshold: 0.3,     // déclenche quand 30% de la section est visible
+    triggerOnce: true,
+    threshold: 0.3,
   });
 
   return (
     <section className="passions-cloud-section" ref={ref}>
-      <h2>Mes Passions</h2>
+      <h2>{t("home.titreHobby")}</h2>
 
       {inView && (
         <div className="passions-cloud">
-          {/* Image principale */}
-          
-          {/* Fait main sur Krita */}
-          <img src={hobbyPanda} alt="Dessin panda" className="floating-img" /> 
+          {/* Dessin fait main sur Krita */}
+          <img src={hobbyPanda} alt="Dessin panda" className="floating-img" />
 
           {/* Icônes en orbite */}
           <img src={musicIcon} alt="Musique" className="orbit-icon icon1" />
@@ -36,7 +38,11 @@ export default function HobbyCloud() {
           <img src={devIcon} alt="Dev" className="orbit-icon icon4" />
           <img src={photoIcon} alt="Photo" className="orbit-icon icon5" />
           <img src={dessinIcon} alt="Dessin" className="orbit-icon icon6" />
-          <img src={jeuVideoIcon} alt="Jeu Video" className="orbit-icon icon7" />
+          <img
+            src={jeuVideoIcon}
+            alt="Jeu Video"
+            className="orbit-icon icon7"
+          />
         </div>
       )}
     </section>

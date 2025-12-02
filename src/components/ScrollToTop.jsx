@@ -1,4 +1,5 @@
-// src/components/ScrollToTop.jsx
+// Scroll to top after redirections 
+
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 

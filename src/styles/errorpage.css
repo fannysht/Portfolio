@@ -1,3 +1,7 @@
+/* =========================================
+            Errors page
+   ========================================= */
+
 .error-page {
   background: var(--color-midc);
   color: var(--color-lightc);
@@ -51,6 +55,11 @@
   background-color: var(--color-lightm);
   color: var(--color-darkm);
 }
+
+/* =========================================
+                Responsives
+   ========================================= */
+
 /* Desktop large */
 @media (min-width: 1201px) {
   .error-page h1 {

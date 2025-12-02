@@ -1,0 +1,187 @@
+{
+  "nav": {
+    "home": "Home",
+    "education": "Education",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact",
+    "toggleLanguage": "EN"
+  },
+
+  "home": {
+    "titre": "Hello, I am",
+    "descr": "Full Stack Developer specialized in bioinformatics, passionate about data processing and building web solutions",
+    "skillsTitre": "My skills",
+    "titreBDD": "Databases",
+    "titreCloud": "DevOps / Cloud / Deployment",
+    "titreQualite": "Testing / Quality Assurance",
+    "titreCollab": "Collaboration & Productivity",
+    "titreDesign": "Design & Analytics",
+    "titreBioinfo": "Bioinformatics",
+    "titreBiologie": "Biology",
+    "titreLaboratoire": "Lab & Regulations",
+    "titreGestion": "Project management",
+    "suiteOffice": "Microsoft Office Suite (Word, Excel, PowerPoint...)",
+    "labAnalysis": "Laboratory analysis",
+    "labTechniques": "Laboratory techniques",
+    "fundamentalBio": "Fundamental biology",
+    "microImmuno": "Microbiology and immunology",
+    "appliedBio": "Applied biology & biotechnology",
+    "evolSystem": "Evolutionary and systematic biology",
+    "structOmics": "Structural biology & omics",
+    "csv": "CSV (Computer System Validation)",
+    "iso": "ISO standards",
+    "titreHobby": "Hobbies "
+  },
+  "diplomes": {
+    "pageTitle": "Degrees",
+
+    "master2Title": "Master 2 in Physiological, Biotechnological, and Computer Engineering (GPHY)",
+    "master2School": "University of Poitiers",
+    "master2Option": "Biotechnology Option",
+    "master2Contenu": [
+      "Training on data warehouses, API and information security",
+      "Training in web development and databases for third-year undergraduate students",
+      "<u>Semester project</u>: Android app programming",
+      "<u>Communication project</u>: Creation of a company / start-up",
+      "<u>Annual project</u>: Development of a 3D head mapping application",
+      "<u>Work-study program</u>: LIMS and IT consultant"
+    ],
+
+    "master1Title": "Master 1 in Physiological, Biotechnological, and Computer Engineering (GPHY)",
+    "master1School": "University of Poitiers",
+    "master1Option": "Biotechnology Option",
+    "master1Contenu": [
+      "Skills in OMICS, quality, databases, and bioinformatics",
+      "Project management with SCRUM certification",
+      "<u>Semester project</u>: Creation of an interactive game in Java",
+      "<u>Semester research project</u>: «Metabolomics in colorectal cancer diagnosis»",
+      "<u>Annual project</u>: Development and optimization of the ranking interface for the Parcoursup algorithm for STAPS at the national level",
+      "<u>Final-year internship</u>: LIMS and IT consultant"
+    ],
+
+    "licenceTitle": "Bachelor's Degree in Bioinformatics (Licence 3)",
+    "licenceSchool": "University of Poitiers",
+    "licenceContenu": [
+      "Skills in web development, databases, systems, and networks",
+      "Knowledge in genetic engineering, biotechnology, and physiology",
+      "<u>Annual web development project</u>: Creation of a website in CSS / HTML / Javascript / PHP / MySQL",
+      "<u>Internship in bioinformatics</u>: Programming and biological data analysis"
+    ],
+
+    "dutTitle": "DUT in Biological Engineering",
+    "dutSchool": "I.U.T Clermont Auvergne / Aurillac",
+    "dutOption": "Bioinformatics Option",
+    "dutContenu": [
+      "Developed skills in (bio)informatics, including Python, C, Perl/BioPerl, SQL, and Java",
+      "Studied genomics, phylogeny, pharmacology, microbiology, as well as other experimental and theoretical areas",
+      "<u>Semester research project</u>: «Voronoi diagrams and biology»",
+      "<u>Internship in bioinformatics</u>: programming and biological data analysis"
+    ]
+  },
+
+  "experience": {
+    "pageTitle": "Professional Experience",
+
+    "exp1": {
+      "date": "January 2025 - Present",
+      "title": "IT & CSV Consultant",
+      "subtitle": "Efor",
+      "location": "Strasbourg - France",
+      "contenu": [
+        "Deployment and configuration of servers, websites, and webapps via internal CMS",
+        "Server maintenance, version control with Git, and Python automation",
+        "Technical support, coordination, and monitoring of business teams",
+        "Monitoring, investigation, and incident resolution",
+        "Initiation, management, and follow-up of web-related projects",
+        "Tracking, management, and coordination of service requests and incidents from internal teams",
+        "Development of internal tools",
+        "<u>Tools & Environment</u>: Internal CMS, Python, Git"
+      ]
+    },
+    "exp2": {
+      "date": "May 2023 - September 2024",
+      "title": "CSV, LIMS & IT Engineer Consultant",
+      "subtitle": "wega Informatik AG",
+      "location": "Basel - Switzerland",
+      "description": "Master internship (years 1 and 2)",
+      "contenu": [
+        "Experience with LIMS, CSV, QMS, URS, Scrum Master training, and regulatory compliance",
+        "Updated architecture diagrams for client software",
+        "Created a web tool 'Feedback Board' using HTML, CSS, JavaScript, PHP, MySQL, and Azure",
+        "Participation in implementing solutions for website translation on WordPress",
+        "<u>CSV consulting</u>: contributed to the management of computerized systems, ensuring their ongoing compliance",
+        "<u>Tools</u>: Azure DevOps, Git, Node.js (Express), Docker, Microsoft Authentication, MySQL, WordPress"
+      ]
+    },
+    "exp3": {
+      "date": "May 2022 - July 2022",
+      "title": "Bioinformatic analysis of CRISPR loci at the genus scale in <i>Xanthomonas</i>",
+      "subtitle": "National Research and Development Institute (IRD)",
+      "location": "Montpellier - France",
+      "description": "Licence internship",
+      "contenu": [
+        "Study of three species: <i>Xanthomonas translucens</i>, <i>Xanthomonas albilineans</i>, and <i>Xanthomonas hortorum</i>",
+        "Prediction of CRISPR loci, phylogenetic tree construction, and spacer comparison",
+        "Python and Bash scripts for process automation",
+        "<u>Tools</u>: CRISPRCasFinder, FastANI, MEGA11, BLAST, Galaxy"
+      ]
+    },
+    "exp4": {
+      "date": "March 2021 - June 2021",
+      "title": "Genome analysis and comparison of bacteria isolated from the human microbiota",
+      "subtitle": "National Institute for Agricultural Research (INRA)",
+      "location": "Saint-Gènes-Champanelle - France",
+      "description": "D.U.T internship",
+      "contenu": [
+        "Analysis of a comparative genomics study on 22 human bacterial strains (PacBio Sequel II)",
+        "Phylogenetic analysis and screening of virulence and antibiotic resistance genes",
+        "Python scripting and Conda environments",
+        "<u>Tools</u>: Prokka, Roary, OrthoANI, RGI, VFDB"
+      ]
+    }
+  },
+  "projets": {
+    "pageTitle": "Projects",
+    "categoryPersonnel": "Personal projects",
+    "categoryUniversitaire": "University projects",
+    "details": "See Github",
+
+    "capillaire": {
+      "title": "Pascaline Coiffure - Colmar",
+      "text": "Redesign of the website for a hair salon / Hair Institute of a member of my family",
+      "status": "Development still ongoing"
+    },
+    "portfolio": {
+      "title": "My portfolio",
+      "text": "Portfolio development in React and creation of illustrations with Krita"
+    },
+    "carteTete3D": {
+      "title": "3D head mapping",
+      "text": "Creation of an application dedicated to 3D head mapping. Project carried out in a team as part of the studies."
+    },
+    "projetWebEchange": {
+      "title": "Exchange of specifications",
+      "text": "Project exchange between teams: development of a website according to the received specifications. Creation of a database and an NBA ranking system."
+    },
+    "projetParcoursup": {
+      "title": "Algorithm optimization and Parcoursup interface",
+      "text": "Adaptation of the algorithm to the new baccalaureate rules and improvement of the Parcoursup ranking interface for STAPS at the national level."
+    },
+    "projetSantéPersonnalisée": {
+      "title": "Personalized health business project",
+      "text": "Hypothetical creation of a company combining biology, genetics and nutrition. Includes financial plan development, market analysis and communication strategy."
+    },
+    "projetJava": {
+      "title": "Space exploration game",
+      "text": "Team project: development of a game where the player explores several planets to find a remedy in a limited time."
+    }
+  },
+  "contact": {
+    "photoAlt": "Profile photo",
+    "title": "Contact me",
+    "text1": "You can contact me through my social networks",
+    "text2": "I will do my best to respond promptly!",
+    "cvButton": "View my CV"
+  }
+}

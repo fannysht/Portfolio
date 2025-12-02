@@ -1,0 +1,113 @@
+/* =========================================
+          Footer
+   ========================================= */
+
+.footer {
+  height: var(--footer-height, 60px);
+  color: var(--color-navbar-link);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  border-top: 2px solid var(--color-midc);
+  z-index: 2;
+}
+.container-footer {
+  min-width: 90% !important;
+}
+.footer-text {
+  margin: 0;
+  cursor: default;
+}
+
+.footer-links a {
+  color: var(--color-navbar-link);
+  margin-left: 15px;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--color-navbar-link);
+}
+/* ================================
+          Responsive
+================================ */
+
+/* Tablettes et desktop */
+@media (min-width: 769px) {
+  .footer {
+    height: 70px;
+    font-size: 1rem;
+  }
+
+  .container-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+  }
+
+  .footer-links {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .footer {
+    height: auto;
+    text-align: center;
+    flex-direction: row;
+  }
+
+  .footer-text {
+    font-size: 0.9rem;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+}
+
+/* Très petits écrans */
+@media (max-width: 480px) {
+  .footer {
+    height: auto;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .container-footer {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+    padding: 0px 5px;
+    gap: 5px;
+  }
+
+  .footer-text {
+    font-size: 0.9rem;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    font-size: 1.1rem;
+    margin: 0;
+  }
+}

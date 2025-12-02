@@ -1,66 +1,74 @@
+// Page de contact
+
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles/index.css";
-import photoProfil from "../assets/images/photo.JPG";
+import "../styles/contact.css";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import photoProfil from "../assets/images/photo_small_contact.webp";
+import { useTranslation } from "react-i18next";
 
 function Contact() {
+  const { t } = useTranslation();
+
   return (
-    <section className="contact-container">
-<div className="contact-left-container">
-  {/* Blob de fond */}
-  <div className="blob-back"></div>
+    <div className="page-contact">
+      <section className="contact-container">
+        <div className="contact-left-container">
+          {/* Image */}
+          <div className="blob-back"></div>
+          <img
+            src={photoProfil}
+            alt={t("contact.photoAlt")}
+            className="blob-photo"
+            fetchPriority="high"
+          />
+        </div>
 
-  {/* Photo animée */}
-  <img src={photoProfil} alt="Profil" className="blob-photo" />
-</div>
+        {/* Texte */}
+        <div className="contact-right">
+          <h1 className="contact-title">{t("contact.title")}</h1>
+          <p className="contact-text">
+            {t("contact.text1")} <br />
+            <br />
+            {t("contact.text2")}
+          </p>
 
+          {/* Reseaux */}
+          <div className="contact-links-container">
+            <div className="contact-links">
+              <a
+                href="https://www.linkedin.com/in/fanny-schott"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-social"
+                title="LinkedIn"
+              >
+                <FaLinkedin />
+              </a>
 
+              // TODO Rajouter Lien Github 
+              <a
+                href="https://github.com/tonprofil"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-social"
+                title="GitHub"
+              >
+                <FaGithub />
+              </a>
+            </div>
 
-
-
-      <div className="contact-right">
-        <h1 className="contact-title">Me contacter</h1>
-        <p className="contact-text">
-          N’hésitez pas à me contacter via les liens ci-dessous. <br />
-          Je ferai de mon mieux pour vous répondre rapidement !
-          <br /> <br />
-          N’hésite pas à me contacter via mes réseaux :
-        </p>
-
-        <div className="contact-links-container">
-          <div className="contact-links">
-            <a
-              href="https://www.linkedin.com/in/fanny-schott"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-social"
-              title="LinkedIn"
-            >
-              <i className="bi bi-linkedin"></i>
-            </a>
-    {/* A Ajouter - GitHub */}
-            <a
-              href="error"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-social"
-              title="GitHub"
-            >
-              <i className="bi bi-github"></i>
-            </a>
-          </div>
-
-          <a
+            {/* <a
             href="/CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-cv"
           >
-            Voir mon CV
-          </a>
+            {t("contact.cvButton")}
+          </a> */}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }
 

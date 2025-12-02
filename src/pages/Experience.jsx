@@ -1,21 +1,35 @@
+// Page des experiences pro
+
 import React, { useEffect, useRef } from "react";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "framer-motion";
 import { FaGraduationCap } from "react-icons/fa";
-import "../styles/index.css";
+import { useTranslation } from "react-i18next";
+import "../styles/experiences.css";
 
-
-// Composant pour chaque diplôme/expérience
-const Diplomes = ({ date, title, subtitle, location, description, isLeft, icon: Icon }) => {
+const Diplomes = ({
+  date,
+  title,
+  subtitle,
+  location,
+  description,
+  textContenu,
+  isLeft,
+  icon: Icon,
+}) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
+
   useEffect(() => {
-    if (isInView) mainControls.start("visible");
+    if (isInView) mainControls.start("visible"); // Animation quand l'élément est visible
   }, [isInView, mainControls]);
 
   return (
-    // TODO Ajouter une animation 
-    <div className={`diplome-container ${isLeft ? "left-side" : "right-side"}`} ref={ref}>
+    <div
+      className={`diplome-container ${isLeft ? "left-side" : "right-side"}`}
+      ref={ref}
+    >
       <motion.div
         variants={{
           hidden: { opacity: 0, x: isLeft ? -50 : 50 },
@@ -27,19 +41,39 @@ const Diplomes = ({ date, title, subtitle, location, description, isLeft, icon: 
         className="timeline-item"
       >
         <div className="card timeline-card">
-          <div className="card-body">
-            <div className="d-flex align-items-center mb-3">
+          <div className="card-body-exp">
+            {/* En-tête du diplôme avec icône */}
+            <div className="d-flex align-items-center mb-3 experience">
               <div className="timeline-icon me-3">
                 <Icon />
               </div>
-              <div>
-                <h5 className="card-title">{title}</h5>
-                <h6 className="card-subtitle mb-0">{subtitle}</h6>
-                <p className="location mb-0">{location}</p>
+              <div className="titre-experience">
+                <h5
+                  className="card-title-exp"
+                  dangerouslySetInnerHTML={{ __html: title }}
+                />
+                <h6
+                  className="card-subtitle-exp mb-0"
+                  dangerouslySetInnerHTML={{ __html: subtitle }}
+                />
+                <p className="location-exp mb-0">{location}</p>
               </div>
             </div>
+
             <p className="text-muted mb-1">{date}</p>
             <p className="card-text">{description}</p>
+
+            {textContenu && (
+              <div className="exp-text-container mt-2">
+                {textContenu.map((line, i) => (
+                  <p
+                    key={i}
+                    className="exp-text-contenu"
+                    dangerouslySetInnerHTML={{ __html: line }}
+                  />
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </motion.div>
@@ -47,50 +81,59 @@ const Diplomes = ({ date, title, subtitle, location, description, isLeft, icon: 
   );
 };
 
-// Composant principal Experience
+// Composant principal
 const Experience = () => {
+  const { t } = useTranslation();
+
+  // Données des cards
   const timelineData = [
     {
-      date: "janvier 2025 - Present",
-      title: "Consultant IT & CSV",
-      subtitle: "Efor",
-      location: "Strasbourg - France",
-      description: "................",
+      date: t("experience.exp1.date"),
+      title: t("experience.exp1.title"),
+      subtitle: t("experience.exp1.subtitle"),
+      location: t("experience.exp1.location"),
+      textContenu: t("experience.exp1.contenu", { returnObjects: true }),
       icon: FaGraduationCap,
     },
     {
-      date: "mai 2023 - septembre 2024",
-      title: "Consultant CSV, LIMS & Ingénieur IT",
-      subtitle: "wega Informatik AG",
-      location: "Bâle - Suisse",
-      description: "Stage de Master 1 et 2",
+      date: t("experience.exp2.date"),
+      title: t("experience.exp2.title"),
+      subtitle: t("experience.exp2.subtitle"),
+      location: t("experience.exp2.location"),
+      description: t("experience.exp2.description"),
+      textContenu: t("experience.exp2.contenu", { returnObjects: true }),
       icon: FaGraduationCap,
     },
     {
-      date: "mai 2022 - juillet 2022",
-      title: "Analyse bioinformatique des loci CRISPR à l’échelle du genre dans la bactérie Xanthomonas",
-      subtitle: "Institut national de recherche et de développement (IRD)",
-      location: "Montpellier - France",
-      description: "Stage de licence 3",
+      date: t("experience.exp3.date"),
+      title: t("experience.exp3.title"),
+      subtitle: t("experience.exp3.subtitle"),
+      location: t("experience.exp3.location"),
+      description: t("experience.exp3.description"),
+      textContenu: t("experience.exp3.contenu", { returnObjects: true }),
       icon: FaGraduationCap,
     },
     {
-      date: "mars 2021 - juin 2021",
-      title: "Analyse et comparaisons des génomes de bactéries isolées du microbiote humain",
-      subtitle: "Institut national de la recherche agronomique (INRA)",
-      location: "Saint-Gènes-Champanelle - France",
-      description: "Stage de D.U.T",
+      date: t("experience.exp4.date"),
+      title: t("experience.exp4.title"),
+      subtitle: t("experience.exp4.subtitle"),
+      location: t("experience.exp4.location"),
+      description: t("experience.exp4.description"),
+      textContenu: t("experience.exp4.contenu", { returnObjects: true }),
       icon: FaGraduationCap,
     },
   ];
 
   const lineRef = useRef(null);
 
+  // Gestion de la timeline
   useEffect(() => {
     const handleScroll = () => {
       if (lineRef.current) {
         const scrollPercentage =
-          (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+          (window.scrollY /
+            (document.documentElement.scrollHeight - window.innerHeight)) *
+          100;
         lineRef.current.style.background = `linear-gradient(to bottom, #364f49 ${scrollPercentage}%, #b5c1ccff ${scrollPercentage}%)`;
       }
     };
@@ -99,26 +142,32 @@ const Experience = () => {
   }, []);
 
   return (
-    <div className="timeline-wrapper-experience">
-      <div className="timeline-background">
-        <div className="container timeline-wrapper">
-          <h1 className="timeline-title">Expériences professionnelles</h1>
-          <div className="position-relative">
-            <div ref={lineRef} className="timeline-line" />
-            {timelineData.map((item, index) => (
-              <Diplomes
-                key={index}
-                date={item.date}
-                title={item.title}
-                subtitle={item.subtitle}
-                location={item.location}
-                description={item.description}
-                isLeft={index % 2 === 0}
-                icon={item.icon}
-              />
-            ))}
+    <div className="experience-page">
+      <div className="timeline-wrapper-experience">
+        <div className="timeline-background">
+          <div className="container timeline-wrapper">
+            <h1 className="timeline-title">{t("experience.pageTitle")}</h1>
+
+            <div className="position-relative">
+              {/* Timeline */}
+              <div ref={lineRef} className="timeline-line" />
+
+              {/* Boucle pour générer chaque diplôme */}
+              {timelineData.map((item, index) => (
+                <Diplomes
+                  key={index}
+                  date={item.date}
+                  title={item.title}
+                  subtitle={item.subtitle}
+                  location={item.location}
+                  description={item.description}
+                  textContenu={item.textContenu}
+                  isLeft={index % 2 === 0} // Alternance gauche/droite
+                  icon={item.icon}
+                />
+              ))}
+            </div>
           </div>
-          
         </div>
       </div>
     </div>

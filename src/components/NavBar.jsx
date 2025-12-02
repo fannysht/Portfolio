@@ -1,20 +1,39 @@
-import React, { useState, forwardRef } from "react";
+// Header - Navbar
+
+import React, { useState, useEffect, forwardRef } from "react";
 import { NavLink } from "react-router-dom";
-import "../styles/index.css";
-import logo from "../assets/images/Navbar-dessin.png";
+import "../styles/navbar.css";
+import { useTranslation } from "react-i18next";
+import logo from "../assets/images/Navbar_dessin_small.webp";
 
 const NavBar = forwardRef((props, ref) => {
-  const [lang, setLang] = useState("FR");
+  const { t, i18n } = useTranslation(); // Pour i18
+  const [lang, setLang] = useState(i18n.language.toUpperCase());
   const [menuOpen, setMenuOpen] = useState(false);
+  const toggleLang = () => {
+    const newLang = lang === "FR" ? "EN" : "FR";
+    setLang(newLang);
+    i18n.changeLanguage(newLang.toLowerCase());
+  };
+  useEffect(() => {
+    const savedLang = localStorage.getItem("siteLang");
+    if (savedLang) {
+      i18n.changeLanguage(savedLang);
+      setLang(savedLang.toUpperCase());
+    }
+  }, []);
 
-  const toggleLang = () => setLang(lang === "FR" ? "EN" : "FR");
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
     <header className="main-header" ref={ref}>
       <div className="container">
         <nav className="navbar navbar-expand-lg main-nav px-0">
-          <NavLink className="navbar-brand" to="/home" onClick={() => setMenuOpen(false)}>
+          <NavLink
+            className="navbar-brand"
+            to="/home"
+            onClick={() => setMenuOpen(false)}
+          >
             <img src={logo} alt="logo_header" />
           </NavLink>
 
@@ -35,33 +54,57 @@ const NavBar = forwardRef((props, ref) => {
           >
             <ul className="navbar-nav ml-auto text-uppercase f1 desktop-menu">
               <li>
-                <NavLink to="/home" className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMenuOpen(false)}>
-                  Accueil
+                <NavLink
+                  to="/home"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {t("nav.home")}
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/diplomes" className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMenuOpen(false)}>
-                  Éducation
+                <NavLink
+                  to="/diplomes"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {t("nav.education")}
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/experience" className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMenuOpen(false)}>
-                  Expérience
+                <NavLink
+                  to="/experience"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {t("nav.experience")}
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/projets" className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMenuOpen(false)}>
-                  Projets
+                <NavLink
+                  to="/projets"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {t("nav.projects")}
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/contact" className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMenuOpen(false)}>
-                  Contact
+                <NavLink
+                  to="/contact"
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {t("nav.contact")}
                 </NavLink>
               </li>
 
               <div className="nav-toggles">
-                <button className="btn-circle" onClick={toggleLang} title="Toggle language">
+                <button
+                  className="btn-circle"
+                  onClick={toggleLang}
+                  title="Toggle language"
+                >
                   {lang}
                 </button>
               </div>
@@ -73,19 +116,30 @@ const NavBar = forwardRef((props, ref) => {
         <div className={`nav-overlay ${menuOpen ? "open" : ""}`}>
           <ul className="navbar-nav">
             <li>
-              <NavLink to="/home" onClick={() => setMenuOpen(false)}>Accueil</NavLink>
+              <NavLink to="/home" onClick={() => setMenuOpen(false)}>
+                {t("nav.home")}
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/diplomes" onClick={() => setMenuOpen(false)}>Éducation</NavLink>
+              <NavLink to="/diplomes" onClick={() => setMenuOpen(false)}>
+                {t("nav.education")}
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/experience" onClick={() => setMenuOpen(false)}>Expérience</NavLink>
+              <NavLink to="/experience" onClick={() => setMenuOpen(false)}>
+                {" "}
+                {t("nav.experience")}
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/projets" onClick={() => setMenuOpen(false)}>Projets</NavLink>
+              <NavLink to="/projets" onClick={() => setMenuOpen(false)}>
+                {t("nav.projects")}
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/contact" onClick={() => setMenuOpen(false)}>Contact</NavLink>
+              <NavLink to="/contact" onClick={() => setMenuOpen(false)}>
+                {t("nav.contact")}
+              </NavLink>
             </li>
             <div className="nav-toggles">
               <button className="btn-circle" onClick={toggleLang}>

@@ -1,0 +1,185 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "education": "Éducation",
+    "experience": "Expérience",
+    "projects": "Projets",
+    "contact": "Contact",
+    "toggleLanguage": "FR"
+  },
+  "home": {
+    "titre": "Bonjour, je suis",
+    "descr": "Développeuse Full Stack spécialisée en bioinformatique, passionnée par le traitement de données et la création de solutions web",
+    "skillsTitre": "Mes compétences",
+    "titreBDD": "Bases de données",
+    "titreCloud": "DevOps / Cloud / Déploiement",
+    "titreQualite": "Tests / Assurance qualité",
+    "titreCollab": "Collaboration & Productivité",
+    "titreDesign": "Design & Analyse",
+    "titreBioinfo": "Bioinformatique",
+    "titreBiologie": "Biologie",
+    "titreLaboratoire": "Laboratoire et règlements",
+    "titreGestion": "Gestion de projets",
+    "suiteOffice": "Suite Office (Word, Excel, PowerPoint...)",
+    "labAnalysis": "Analyse de laboratoire",
+    "labTechniques": "Techniques de laboratoire",
+    "fundamentalBio": "Biologie fondamentale",
+    "microImmuno": "Microbiologie et immunologie",
+    "appliedBio": "Biologie appliquée et biotechnologie",
+    "evolSystem": "Biologie évolutive et systématique",
+    "structOmics": "Biologie structurale et omiques",
+    "csv": "CSV (Validation des systèmes informatisés)",
+    "iso": "Normes ISO",
+    "titreHobby": "Mes passions"
+  },
+  "diplomes": {
+    "pageTitle": "Diplômes",
+    "master2Title": "Master 2 génie physiologique, biotechnologique et informatique (GPHY)",
+    "master2School": "Université de Poitiers",
+    "master2Option": "Option Biotechnologie",
+    "master2Contenu": [
+      "Apprentissage sur les entrepôts de données, les API et la sécurité informatique",
+      "Formation sur le développement web et les bases de données pour les étudiants de Licence 3",
+      "<u>Projet semestriel</u>: Programmation d'une application Android",
+      "<u>Projet de communication</u>: Création d'une entreprise / start-up",
+      "<u>Projet annuel</u>: Développement d'une application de cartographie 3D de la tête",
+      "<u>Alternance</u>: Consultante LIMS et IT"
+    ],
+
+    "master1Title": "Master 1 génie physiologique, biotechnologique et informatique (GPHY)",
+    "master1School": "Université de Poitiers",
+    "master1Option": "Option Biotechnologie",
+    "master1Contenu": [
+      "Compétences en OMICS, qualité, bases de données et bioinformatique",
+      "Gestion de projet avec certification SCRUM",
+      "<u>Projet semestriel</u>: Création d'un jeu interactif en Java",
+      "<u>Projet de recherche semestriel</u>: «La métabolomique dans le diagnostic du cancer colorectal»",
+      "<u>Projet annuel</u>: Développement et optimisation de l'interface de classement de l'algorithme Parcoursup pour les STAPS au niveau national",
+      "<u>Stage de fin d'année</u>: Consultante LIMS et IT"
+    ],
+
+    "licenceTitle": "Licence 3 Bioinformatique",
+    "licenceSchool": "Université de Poitiers",
+    "licenceContenu": [
+      "Compétences en développement web, bases de données, systèmes et réseaux",
+      "Connaissances en génie génétique, biotechnologie et physiologie",
+      "<u>Projet annuel de développement web</u>: Création d'un site web en CSS / HTML / Javascript / PHP / MySQL",
+      "<u>Stage en bioinformatique</u>: Programmation et analyse de données biologiques"
+    ],
+
+    "dutTitle": "D.U.T. Génie biologique",
+    "dutSchool": "I.U.T Clermont Auvergne / Aurillac",
+    "dutOption": "Option Bioinformatique",
+    "dutContenu": [
+      "Developpement de compétences en (bio)informatique, incluant Python, C, Perl/BioPerl, SQL et Java",
+      "Apprentissage de la génomique, phylogénie, pharmacologie, microbiologie, ainsi que sur d’autres domaines expérimentaux et théoriques",
+      "<u>Projet de recherche semestriel</u>: «Les diagrammes de Voronoï et la biologie»",
+
+      "<u>Stage en bioinformatique</u>: Programmation et analyse de données biologiques"
+    ]
+  },
+  "experience": {
+    "pageTitle": "Expériences professionnelles",
+
+    "exp1": {
+      "date": "janvier 2025 - présent",
+      "title": "Consultant IT & CSV",
+      "subtitle": "Efor",
+      "location": "Strasbourg - France",
+      "contenu": [
+        "Déploiement et configuration de serveurs, sites web et webapps via CMS interne",
+        "Maintenance serveur, gestion de versions via Git et automatisation Python",
+        "Support technique, coordination et suivi des équipes métier",
+        "Monitoring, investigation et résolution d’incidents",
+        "Lancement, pilotage et suivi des projets liés aux sites web",
+        "Suivi, gestion et coordination des demandes de service et des incidents des équipes internes",
+        "Développement d'outils internes",
+        "<u>Outils & Environnements</u>: CMS interne, Python, Git"
+      ]
+    },
+    "exp2": {
+      "date": "mai 2023 - septembre 2024",
+      "title": "Consultant CSV, LIMS & Ingénieur IT",
+      "subtitle": "wega Informatik AG",
+      "location": "Bâle - Suisse",
+      "description": "Stage de Master 1 et 2",
+      "contenu": [
+        "Expérience avec LIMS, CSV, QMS, URS, formation Scrum Master et conformité réglementaire",
+        "Mise à jour des diagrammes d’architecture pour le logiciel client",
+        "Création d’un outil web 'Feedback Board' utilisant HTML, CSS, JavaScript, PHP, MySQL et Azure",
+        "Participation à l’implémentation de solutions pour la traduction du site web sur WordPress",
+        "<u>Consulting en CSV</u>: contribuer à la gestion des systèmes informatisés, en veillant à leur conformité continue",
+        "<u>Outils</u>: Azure DevOps, Git, Node.js (Express), Docker, Microsoft Authentication, mySQL, WordPress"
+      ]
+    },
+    "exp3": {
+      "date": "mai 2022 - juillet 2022",
+      "title": "Analyse bioinformatique des loci CRISPR à l’échelle du genre dans la bactérie <i>Xanthomonas</i>",
+      "subtitle": "Institut national de recherche et de développement (IRD)",
+      "location": "Montpellier - France",
+      "description": "Stage de licence 3",
+      "contenu": [
+        "Étude de trois espèces: <i>Xanthomonas translucens</i>, <i>Xanthomonas albilineans</i>, et <i>Xanthomonas hortorum</i>",
+        "Prédiction des loci CRISPR, construction d’arbres phylogénétiques et comparaison des spacers",
+        "Scripts Python et Bash pour l’automatisation des processus",
+        "<u>Outils</u>: CRISPRCasFinder, FastANI, MEGA11, BLAST, Galaxy"
+      ]
+    },
+    "exp4": {
+      "date": "mars 2021 - juin 2021",
+      "title": "Analyse et comparaisons des génomes de bactéries isolées du microbiote humain",
+      "subtitle": "Institut national de la recherche agronomique (INRA)",
+      "location": "Saint-Gènes-Champanelle - France",
+      "description": "Stage de D.U.T",
+      "contenu": [
+        "Analyse d'une etude de génomique comparative sur 22 souches bactériennes humaines (PacBio Sequel II)",
+        "Analyse phylogénétique et recherche de gènes de virulence / antibiorésistance",
+        "Scripts Python et environnements Conda",
+        "<u>Outils</u>: Prokka, Roary, OrthoANI, RGI, VFDB"
+      ]
+    }
+  },
+  "projets": {
+    "pageTitle": "Projets",
+    "categoryPersonnel": "Projets personnels",
+    "categoryUniversitaire": "Projets universitaires",
+    "details": "Voir Github",
+
+    "capillaire": {
+      "title": "Pascaline Coiffure - Colmar",
+      "text": "Refonte du site web d'un salon de coiffure / Institut Capillaire d'un membre de ma famille.",
+      "status": "Developpement toujours en cours"
+    },
+    "portfolio": {
+      "title": "Mon portfolio",
+      "text": "Développement du portfolio en React et création des illustrations avec Krita."
+    },
+    "carteTete3D": {
+      "title": "Cartographie 3D de la tête",
+      "text": "Création d’une application dédiée à la cartographie 3D de la tête. Projet réalisé en équipe dans le cadre des études."
+    },
+    "projetWebEchange": {
+      "title": "Échange de cahier des charges",
+      "text": "Échange de projet entre équipes : développement d’un site web selon le cahier des charges reçu. Réalisation d’une base de données et d’un système de classement de la NBA."
+    },
+    "projetParcoursup": {
+      "title": "Optimisation algorithme et interface Parcoursup",
+      "text": "Adaptation de l’algorithme aux nouvelles règles du baccalauréat et amélioration de l’interface de classement Parcoursup pour les STAPS au niveau national."
+    },
+    "projetSantéPersonnalisée": {
+      "title": "Projet d'entreprise santé personnalisée",
+      "text": "Création hypothétique d’une entreprise combinant biologie, génétique et nutrition. Comprend élaboration du plan financier, analyse de marché et stratégie de communication."
+    },
+    "projetJava": {
+      "title": "Jeu d'exploration spatiale",
+      "text": "Projet réalisé en équipe : développement d’un jeu où le joueur explore plusieurs planètes pour trouver un remède dans un temps limité."
+    }
+  },
+  "contact": {
+    "photoAlt": "Photo de profil",
+    "title": "Me contacter",
+    "text1": "N’hésitez pas à me contacter.",
+    "text2": "Je ferai de mon mieux pour vous répondre rapidement!",
+    "cvButton": "Voir mon CV"
+  }
+}
