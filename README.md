@@ -17,5 +17,4 @@ npm start
 Lien : https://..........
 
 
-```md
 ![Aperçu du portfolio](./public/Portfolio-projet.png)
