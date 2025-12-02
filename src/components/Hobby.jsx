@@ -29,20 +29,16 @@ export default function HobbyCloud() {
       {inView && (
         <div className="passions-cloud">
           {/* Dessin fait main sur Krita */}
-          <img src={hobbyPanda} alt="Dessin panda" className="floating-img" />
+          <img src={hobbyPanda} alt="Panda" className="floating-img" />
 
           {/* Icônes en orbite */}
           <img src={musicIcon} alt="Musique" className="orbit-icon icon1" />
-          <img src={cameraIcon} alt="Cinema" className="orbit-icon icon2" />
+          <img src={cameraIcon} alt="Cinéma" className="orbit-icon icon2" />
           <img src={pianoIcon} alt="Piano" className="orbit-icon icon3" />
-          <img src={devIcon} alt="Dev" className="orbit-icon icon4" />
-          <img src={photoIcon} alt="Photo" className="orbit-icon icon5" />
+          <img src={devIcon} alt="Développement" className="orbit-icon icon4" />
+          <img src={photoIcon} alt="Photographie" className="orbit-icon icon5" />
           <img src={dessinIcon} alt="Dessin" className="orbit-icon icon6" />
-          <img
-            src={jeuVideoIcon}
-            alt="Jeu Video"
-            className="orbit-icon icon7"
-          />
+          <img src={jeuVideoIcon} alt="Jeu vidéo" className="orbit-icon icon7" />
         </div>
       )}
     </section>
