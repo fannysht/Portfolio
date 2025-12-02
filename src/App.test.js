@@ -1,6 +1,8 @@
+import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
-import App from './App';
+import { BrowserRouter } from 'react-router-dom';
 import { I18nextProvider } from 'react-i18next';
+import App from './App';
 import i18n from './i18n';
 
 jest.mock('./pages/Home', () => () => <div>Home Page</div>);

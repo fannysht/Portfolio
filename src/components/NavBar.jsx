@@ -1,28 +1,15 @@
 // Header - Navbar
 
-import React, { useState, useEffect, forwardRef } from "react";
+import React, { forwardRef } from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/navbar.css";
 import { useTranslation } from "react-i18next";
+import ToggleLanguage from './toggleLanguage';
 import logo from "../assets/images/Navbar_dessin_small.webp";
 
 const NavBar = forwardRef((props, ref) => {
-  const { t, i18n } = useTranslation(); // Pour i18
-  const [lang, setLang] = useState(i18n.language.toUpperCase());
-  const [menuOpen, setMenuOpen] = useState(false);
-  const toggleLang = () => {
-    const newLang = lang === "FR" ? "EN" : "FR";
-    setLang(newLang);
-    i18n.changeLanguage(newLang.toLowerCase());
-  };
-  useEffect(() => {
-    const savedLang = localStorage.getItem("siteLang");
-    if (savedLang) {
-      i18n.changeLanguage(savedLang);
-      setLang(savedLang.toUpperCase());
-    }
-  }, [i18n]);
-
+  const { t } = useTranslation(); // Pour i18
+ const [menuOpen, setMenuOpen] = React.useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
@@ -100,13 +87,7 @@ const NavBar = forwardRef((props, ref) => {
               </li>
 
               <div className="nav-toggles">
-                <button
-                  className="btn-circle"
-                  onClick={toggleLang}
-                  title="Toggle language"
-                >
-                  {lang}
-                </button>
+                <ToggleLanguage />
               </div>
             </ul>
           </div>
@@ -142,9 +123,7 @@ const NavBar = forwardRef((props, ref) => {
               </NavLink>
             </li>
             <div className="nav-toggles">
-              <button className="btn-circle" onClick={toggleLang}>
-                {lang}
-              </button>
+              <ToggleLanguage />
             </div>
           </ul>
         </div>

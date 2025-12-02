@@ -1,24 +1,33 @@
-// Toogle for language
+import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
-import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
-
-function LanguageToggle() {
+const ToggleLanguage = () => {
   const { i18n } = useTranslation();
-  const [lang, setLang] = useState(i18n.language.toUpperCase());
+  const [lang, setLang] = useState(() => {
+  const saved = localStorage.getItem('siteLang') || i18n.language;
+  return saved.split('-')[0].toUpperCase();
+});
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem('siteLang');
+    if (savedLang) {
+      i18n.changeLanguage(savedLang);
+      setLang(savedLang.toUpperCase());
+    }
+  }, [i18n]);
 
   const toggleLang = () => {
-    const newLang = lang === "FR" ? "EN" : "FR";
-    setLang(newLang);
-    i18n.changeLanguage(newLang.toLowerCase());
-    localStorage.setItem("siteLang", newLang.toLowerCase());
-  };
+  const newLang = lang === 'FR' ? 'en' : 'fr';
+  setLang(newLang.toUpperCase());
+  i18n.changeLanguage(newLang);
+  localStorage.setItem('siteLang', newLang);
+};
 
   return (
-    <button className="btn-circle" onClick={toggleLang} title="Toggle language">
+    <button className="btn-circle" onClick={toggleLang}>
       {lang}
     </button>
   );
-}
+};
 
-export default LanguageToggle;
+export default ToggleLanguage;
