@@ -86,9 +86,8 @@ export default function Home() {
               >
                 <FaLinkedin />
               </a>
-              // TODO Ajouter Github
               <a
-                href="#"
+                href="https://github.com/fannysht"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-social-home"

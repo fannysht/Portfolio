@@ -41,14 +41,13 @@ const projetsData = [
       { type: "react", component: FaReact },
     ],
   },
-  // TODO Ajouter github
   {
     category: "personnel",
     title: "projets.portfolio.title",
     text: "projets.portfolio.text",
     image: portfolioImage,
     details: true,
-    githubLink: "https://github.com/fannysht?tab=repositories",
+    githubLink: "https://github.com/fannysht/Portfolio",
     logos: [
       { type: "bootstrap", name: "bi-bootstrap" },
       { type: "react", component: FaReact },

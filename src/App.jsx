@@ -37,7 +37,7 @@ function Loader({ duration = 2000 }) {
 
   if (!loading) return null;
   return (
-    <div id="loader-container">
+    <div id="loader-container" data-testid="loader-container">
       <span className="loader"></span>
     </div>
   );
@@ -77,9 +77,9 @@ export default function App() {
               <Route
                 path="/home"
                 element={
-                  <Suspense fallback={<div>Loading...</div>}>
+                  <Suspense fallback={<Loader />}>
                     <PageWrapper showLoader={true}>
-                      <Home /> {/* Home est lazy import */}
+                      <Home /> 
                     </PageWrapper>
                   </Suspense>
                 }
@@ -87,7 +87,7 @@ export default function App() {
               <Route
                 path="/contact"
                 element={
-                  <Suspense fallback={<div>Loading...</div>}>
+                  <Suspense fallback={<Loader />}>
                     <PageWrapper showLoader={true}>
                       <Contact />
                     </PageWrapper>
@@ -98,7 +98,7 @@ export default function App() {
               <Route
                 path="/diplomes"
                 element={
-                  <Suspense fallback={<div>Loading...</div>}>
+                  <Suspense fallback={<Loader />}>
                     <PageWrapper showLoader={true}>
                       <Diplomes />
                     </PageWrapper>
@@ -108,7 +108,7 @@ export default function App() {
               <Route
                 path="/projets"
                 element={
-                  <Suspense fallback={<div>Loading...</div>}>
+                  <Suspense fallback={<Loader />}>
                     <PageWrapper showLoader={true}>
                       <Projets />
                     </PageWrapper>
@@ -118,7 +118,7 @@ export default function App() {
               <Route
                 path="/experience"
                 element={
-                  <Suspense fallback={<div>Loading...</div>}>
+                  <Suspense fallback={<Loader />}>
                     <PageWrapper showLoader={true}>
                       <Experience />
                     </PageWrapper>

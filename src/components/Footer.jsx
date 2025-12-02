@@ -21,9 +21,8 @@ function Footer() {
           >
             <FaLinkedin />
           </a>
-          // TODO /* A Ajouter - GitHub */
           <a
-            href="error"
+            href="https://github.com/fannysht"
             target="_blank"
             rel="noopener noreferrer"
             title="GitHub"

@@ -45,9 +45,8 @@ function Contact() {
                 <FaLinkedin />
               </a>
 
-              // TODO Rajouter Lien Github 
               <a
-                href="https://github.com/tonprofil"
+                href="https://github.com/fannysht"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-social"

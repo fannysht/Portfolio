@@ -21,7 +21,7 @@ const NavBar = forwardRef((props, ref) => {
       i18n.changeLanguage(savedLang);
       setLang(savedLang.toUpperCase());
     }
-  }, []);
+  }, [i18n]);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
