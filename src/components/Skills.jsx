@@ -3,8 +3,10 @@
 import React from "react";
 import "../styles/index.css";
 import { useTranslation } from "react-i18next";
+import useScrollReveal from "./useScrollReveal";
 
 export default function Skills() {
+  useScrollReveal(); 
   const { t } = useTranslation();
 
   const skillCategories = [
