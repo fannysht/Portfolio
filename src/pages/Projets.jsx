@@ -235,7 +235,7 @@ export default function Projets() {
 
   return (
     <div className="page-projets" ref={ref}>
-      <h1 className="projets-section-title">{t("projets.pageTitle")}</h1>
+      {/* <h1 className="projets-section-title">{t("projets.pageTitle")}</h1> */}
 
       {/* Boucle pour afficher les projets */}
       {["personnel", "universitaire"].map((category) => {

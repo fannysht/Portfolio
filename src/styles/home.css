@@ -391,57 +391,88 @@
 }
 
 .skills-category {
+  position: relative;
+  overflow: hidden;
+   opacity: 0;
+    transform: translateY(25px);
   background: linear-gradient(135deg, #f7f9f7, #e6f0e6);
   border-radius: 20px;
   padding: 10px 20px;
-
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease;
   word-wrap: break-word;
-  opacity: 0;
-  transform: translateY(25px);
-  --delay: 0s;
 }
+.category-icon-bg {
+  position: absolute !important;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 119, 77, 0.03),  
+    rgba(0, 119, 77, 0.01)  
+  ); 
+}
+.category-icon-bg .bg-icon {
+  width: 80%;           
+  height: auto;         
+  max-height: 100%;    
+  color: #449e7f;
+  opacity: 0.08;        
+  filter: blur(2.5px);  
+  transform: scale(1);  
+}
+
+.skills-category > * {
+  position: relative;
+  z-index: 1;
+}
+
 .skills-category.in-view {
   opacity: 1;
   transform: translateY(0);
   animation-fill-mode: both;
-  animation-delay: var(--delay);
-  animation-duration: 0.7s;
+  animation-delay: 0.3s;       
+  animation-duration: 0.5s;    
   animation-timing-function: cubic-bezier(.2,.9,.2,1);
+  animation-name: revealCards;
 }
+
 
 .skills-category:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
-
 .category-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 15px;
-  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 18px;
 }
 
 .category-icon {
   font-size: 2rem;
   color: #5f9c87;
-  flex-shrink: 0;
 }
 
 .skills-category h3 {
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-size: clamp(1rem, 1.7vw, 1.3rem);
   font-weight: 600;
   margin: 0;
-  word-break: break-word;
-  flex: 1;
   text-align: center;
 }
+
 
 .skills-category ul {
   list-style: none;
   padding: 10px 0;
   margin: 0;
+  cursor: default;
 }
 
 .skills-category li {
@@ -449,6 +480,7 @@
   padding-left: 26px;
   font-size: clamp(0.9rem, 1.5vw, 1rem);
   margin-bottom: 8px;
+  transition: transform 0.2s ease, color 0.2s ease; 
 }
 .skills-category li::before {
   content: "➤";
@@ -459,24 +491,14 @@
   font-weight: normal;
 }
 
-@keyframes slideInLeft {
-  from { opacity: 0; transform: translateX(-40px); }
-  to   { opacity: 1; transform: translateX(0); }
+.skills-category li:hover {
+  transform: translateX(4px);
 }
-
-@keyframes slideInRight {
-  from { opacity: 0; transform: translateX(40px); }
-  to   { opacity: 1; transform: translateX(0); }
-}
-
-  .skills-category.in-view {
-    animation-name: revealCards; 
-  }
-
 @keyframes revealCards {
   from { opacity: 0; transform: translateY(30px) scale(0.95); }
   to   { opacity: 1; transform: translateY(0) scale(1); }
 }
+
 
 
 

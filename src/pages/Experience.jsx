@@ -3,8 +3,12 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "framer-motion";
-import { FaGraduationCap } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import eforLogo from "../assets/icons/efor-group-logo.webp";
+import wegaLogo from "../assets/icons/wega-logo.webp";
+import irdLogo from "../assets/icons/ird-logo.webp";
+import inraLogo from "../assets/icons/inra-logo.webp";
+
 import "../styles/experiences.css";
 
 const Diplomes = ({
@@ -22,8 +26,16 @@ const Diplomes = ({
   const mainControls = useAnimation();
 
   useEffect(() => {
-    if (isInView) mainControls.start("visible"); // Animation quand l'élément est visible
+    if (isInView) mainControls.start("visible");
   }, [isInView, mainControls]);
+
+  const renderIcon = () => {
+    return typeof Icon === "string" ? (
+      <img src={Icon} alt="icon" className="timeline-img" />
+    ) : (
+      <Icon />
+    );
+  };
 
   return (
     <div
@@ -42,11 +54,8 @@ const Diplomes = ({
       >
         <div className="card timeline-card">
           <div className="card-body-exp">
-            {/* En-tête du diplôme avec icône */}
             <div className="d-flex align-items-center mb-3 experience">
-              <div className="timeline-icon me-3">
-                <Icon />
-              </div>
+              <div className="timeline-icon me-3">{renderIcon()}</div>
               <div className="titre-experience">
                 <h5
                   className="card-title-exp"
@@ -81,11 +90,9 @@ const Diplomes = ({
   );
 };
 
-// Composant principal
 const Experience = () => {
   const { t } = useTranslation();
 
-  // Données des cards
   const timelineData = [
     {
       date: t("experience.exp1.date"),
@@ -93,7 +100,7 @@ const Experience = () => {
       subtitle: t("experience.exp1.subtitle"),
       location: t("experience.exp1.location"),
       textContenu: t("experience.exp1.contenu", { returnObjects: true }),
-      icon: FaGraduationCap,
+      icon: eforLogo,
     },
     {
       date: t("experience.exp2.date"),
@@ -102,7 +109,7 @@ const Experience = () => {
       location: t("experience.exp2.location"),
       description: t("experience.exp2.description"),
       textContenu: t("experience.exp2.contenu", { returnObjects: true }),
-      icon: FaGraduationCap,
+      icon: wegaLogo,
     },
     {
       date: t("experience.exp3.date"),
@@ -111,7 +118,7 @@ const Experience = () => {
       location: t("experience.exp3.location"),
       description: t("experience.exp3.description"),
       textContenu: t("experience.exp3.contenu", { returnObjects: true }),
-      icon: FaGraduationCap,
+      icon: irdLogo,
     },
     {
       date: t("experience.exp4.date"),
@@ -120,13 +127,12 @@ const Experience = () => {
       location: t("experience.exp4.location"),
       description: t("experience.exp4.description"),
       textContenu: t("experience.exp4.contenu", { returnObjects: true }),
-      icon: FaGraduationCap,
+      icon: inraLogo,
     },
   ];
 
   const lineRef = useRef(null);
 
-  // Gestion de la timeline
   useEffect(() => {
     const handleScroll = () => {
       if (lineRef.current) {
@@ -146,13 +152,9 @@ const Experience = () => {
       <div className="timeline-wrapper-experience">
         <div className="timeline-background">
           <div className="container timeline-wrapper">
-            <h1 className="timeline-title">{t("experience.pageTitle")}</h1>
-
             <div className="position-relative">
-              {/* Timeline */}
               <div ref={lineRef} className="timeline-line" />
 
-              {/* Boucle pour générer chaque diplôme */}
               {timelineData.map((item, index) => (
                 <Diplomes
                   key={index}
@@ -162,7 +164,7 @@ const Experience = () => {
                   location={item.location}
                   description={item.description}
                   textContenu={item.textContenu}
-                  isLeft={index % 2 === 0} // Alternance gauche/droite
+                  isLeft={index % 2 === 0}
                   icon={item.icon}
                 />
               ))}

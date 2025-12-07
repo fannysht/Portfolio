@@ -65,7 +65,7 @@ export default function Diplomes() {
       <StarsBackground />
 
       <div className="dipl-container animated-bg">
-        <h1 className="timeline-title">{t("diplomes.pageTitle")}</h1>
+        {/* <h1 className="timeline-title">{t("diplomes.pageTitle")}</h1> */}
 
         {/* Boucle pour générer chaque diplôme */}
         {diplomas.map((diplomes, idx) => (

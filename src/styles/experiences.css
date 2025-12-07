@@ -116,7 +116,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: var(--color-lightc);
+  background-color: var(--color-midd);
   color: var(--color-darkc);
   font-size: 1.5rem;
   flex-shrink: 0;
@@ -333,7 +333,7 @@ p.text-muted {
 /* Mobile ≤768px */
 @media (max-width: 768px) {
   .timeline-background {
-    padding-top: 85px;
+    padding-top: 65px;
     padding-bottom: 0px;
   }
   .timeline-wrapper {

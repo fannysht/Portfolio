@@ -23,6 +23,7 @@
   width: 100%;
   text-align: left;
   padding-bottom: 120px;
+  margin-left: 10px;
   font-size: 1.5rem;
   cursor: default;
 }
@@ -250,6 +251,7 @@
   }
   .cards-section-title {
     padding-bottom: 50px;
+    padding-top: 20px;
   }
   .custom-card-wrapper {
     flex: 1 1 80%;

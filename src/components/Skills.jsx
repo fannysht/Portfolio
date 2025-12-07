@@ -4,15 +4,28 @@ import React from "react";
 import "../styles/index.css";
 import { useTranslation } from "react-i18next";
 import useScrollReveal from "./useScrollReveal";
+import {
+  FaReact,
+  FaNodeJs,
+  FaDatabase,
+  FaCloud,
+  FaTools,
+  FaUsers,
+  FaPalette,
+  FaDna,
+  FaMicroscope,
+  FaFlask,
+  FaProjectDiagram
+} from "react-icons/fa";
 
 export default function Skills() {
-  useScrollReveal(); 
+  useScrollReveal();
   const { t } = useTranslation();
 
   const skillCategories = [
     {
       title: "Front-End",
-      icon: "bi-laptop",
+      icon: FaReact,
       skills: [
         "HTML",
         "CSS",
@@ -26,7 +39,7 @@ export default function Skills() {
     },
     {
       title: "Back-End",
-      icon: "bi-server",
+      icon: FaNodeJs,
       skills: [
         "Node.js",
         "Python",
@@ -38,22 +51,22 @@ export default function Skills() {
     },
     {
       title: t("home.titreBDD"),
-      icon: "bi-database",
+      icon: FaDatabase,
       skills: ["MySQL", "SQLite", "Oracle DB", "PostgreSQL", "MongoDB"],
     },
     {
       title: t("home.titreCloud"),
-      icon: "bi-cloud-upload",
+      icon: FaCloud,
       skills: ["Docker", "Grafana", "ELK Stack", "CI/CD", "Azure DevOps"],
     },
     {
       title: t("home.titreQualite"),
-      icon: "bi-check-circle",
+      icon: FaTools,
       skills: ["Pytest", "PHPUnit", "JUnit", "Selenium"],
     },
     {
       title: t("home.titreCollab"),
-      icon: "bi-people",
+      icon: FaUsers,
       skills: [
         "Jira",
         "Trello",
@@ -67,7 +80,7 @@ export default function Skills() {
     },
     {
       title: t("home.titreDesign"),
-      icon: "bi-palette",
+      icon: FaPalette,
       skills: [
         "Figma",
         "Canva",
@@ -78,7 +91,7 @@ export default function Skills() {
     },
     {
       title: t("home.titreBioinfo"),
-      icon: "bi-cpu",
+      icon: FaDna,
       skills: [
         "Galaxy",
         "Geo2R Sequencing",
@@ -96,7 +109,7 @@ export default function Skills() {
     },
     {
       title: t("home.titreBiologie"),
-      icon: "bi-heart-pulse",
+      icon: FaMicroscope,
       skills: [
         t("home.labAnalysis"),
         t("home.labTechniques"),
@@ -109,7 +122,7 @@ export default function Skills() {
     },
     {
       title: t("home.titreLaboratoire"),
-      icon: "bi-building",
+      icon: FaFlask,
       skills: [
         "GMP / GLP",
         "GAMP5",
@@ -119,7 +132,7 @@ export default function Skills() {
     },
     {
       title: t("home.titreGestion"),
-      icon: "bi-diagram-3",
+      icon: FaProjectDiagram,
       skills: ["Agile", t("home.iso")],
     },
   ];
@@ -128,19 +141,28 @@ export default function Skills() {
     <section className="skills-section" id="skills">
       <h2>{t("home.skillsTitre")}</h2>
       <div className="skills-container">
-        {skillCategories.map((category, idx) => (
-          <div className="skills-category" key={idx}>
-            <div className="category-header">
-              <i className={`bi ${category.icon} category-icon`}></i>
-              <h3>{category.title}</h3>
+        {skillCategories.map((category, idx) => {
+          const BgIcon = category.icon;
+          return (
+            <div className="skills-category" key={idx}>
+              {/* Icône de fond */}
+              <div className="category-icon-bg">
+                <BgIcon className="bg-icon" />
+              </div>
+
+              {/* Header avec icône principale et titre */}
+              <div className="category-header">
+                <h3>{category.title}</h3>
+              </div>
+
+              <ul>
+                {category.skills.map((skill, i) => (
+                  <li key={i}>{skill}</li>
+                ))}
+              </ul>
             </div>
-            <ul>
-              {category.skills.map((skill, i) => (
-                <li key={i}>{skill}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
