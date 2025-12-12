@@ -13,6 +13,7 @@ import {
   SiCanva,
   SiAdobephotoshop,
   SiKrita,
+  SiPython,
 } from "react-icons/si";
 import { useTranslation } from "react-i18next";
 import "../styles/projets.css";
@@ -39,6 +40,7 @@ const projetsData = [
     logos: [
       { type: "bootstrap", name: "bi-bootstrap" },
       { type: "react", component: FaReact },
+      { type: "python", component: SiPython },
     ],
   },
   {
@@ -138,6 +140,7 @@ function LogoIcon({ logo }) {
       canva: { color: "#00C4CC", size: 35 },
       krita: { color: "#2D2D78", size: 35 },
       java: { color: "#5382A1", size: 40 },
+      python: { color: "#3776AB", size: 30 },
     };
 
     const { color, size } = logoStyles[logo.type] || {
