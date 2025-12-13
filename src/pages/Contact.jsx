@@ -26,11 +26,12 @@ function Contact() {
         {/* Texte */}
         <div className="contact-right">
           <h1 className="contact-title">{t("contact.title")}</h1>
-          <p className="contact-text">
-            {t("contact.text1")} <br />
-            <br />
-            {t("contact.text2")}
-          </p>
+          <p
+            className="contact-text"
+            dangerouslySetInnerHTML={{
+              __html: `${t("contact.text1")}<br/><br/>${t("contact.text2")}`,
+            }}
+          />
 
           {/* Reseaux */}
           <div className="contact-links-container">
