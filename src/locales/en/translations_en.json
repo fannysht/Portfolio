@@ -9,30 +9,59 @@
   },
 
   "home": {
-    "titre": "Hello, I am",
-    "descr": "Full Stack Developer specialized in bioinformatics, passionate about data processing and building web solutions",
-    "skillsTitre": "My skills",
+    "titre": "Hello, I'm",
+    "descr": "Full Stack Developer specialized in bioinformatics, passionate about data processing and creating web solutions",
+    "skillsTitre": "My Skills",
+
+    "bioinfOmicsTitle": "Bioinformatics & Omics",
+    "analysesRNA": "RNA-seq Analysis",
+    "genomics": "Genomics",
+    "pipelinesWorkflows": "Pipelines & Workflows",
+    "visualization": "Visualization",
+    "structOmics": "Structural Biology & Omics",
+
+    "devWebTitle": "Development & Web",
+    "statsGraphics": "Statistics & Graphics",
+    "javaApi": "Java & REST API Architecture",
+
+    "dataCloudTitle": "Data Engineering & Cloud",
     "titreBDD": "Databases",
+    "containerization": "Containerization",
+
+    "qualityLabTitle": "Quality & Lab IT",
+    "dataManagement": "Data Management",
+    "systemValidation": "System Validation",
+    "regulatoryCompliance": "Regulatory Compliance",
+    "titreQualite": "Quality Assurance",
+
+    "lifeSciencesTitle": "Life Sciences",
+    "microImmuno": "Microbiology & Immunology",
+    "labAnalysisTechniques": "Laboratory Analysis & Techniques",
+    "molBioGenetics": "Molecular Biology & Genetics",
+    "evolSystem": "Evolutionary Biology & Systematics",
+
+    "managementAnalysisTitle": "Management & Analysis",
+    "titreGestion": "Project Management",
+    "agileScrum": "Agile, ISO Standards, Scrum",
+    "projectTools": "Jira, Notion",
+    "scientificWriting": "Scientific Writing",
+
     "titreCloud": "Cloud / Deployment",
-    "titreQualite": "Testing / Quality Assurance",
     "titreCollab": "Collaboration & Productivity",
-    "titreDesign": "Design & Analytics",
+    "titreDesign": "Design & Analysis",
     "titreBioinfo": "Bioinformatics",
     "titreBiologie": "Biology",
-    "titreLaboratoire": "Lab & Regulations",
-    "titreGestion": "Project management",
-    "suiteOffice": "Microsoft Office Suite (Word, Excel, PowerPoint...)",
-    "labAnalysis": "Laboratory analysis",
-    "labTechniques": "Laboratory techniques",
-    "fundamentalBio": "Fundamental biology",
-    "microImmuno": "Microbiology and immunology",
-    "appliedBio": "Applied biology & biotechnology",
-    "evolSystem": "Evolutionary and systematic biology",
-    "structOmics": "Structural biology & omics",
+    "titreLaboratoire": "Laboratory & Regulations",
+    "suiteOffice": "Office Suite (Word, Excel, PowerPoint...)",
+    "labAnalysis": "Laboratory Analysis",
+    "labTechniques": "Laboratory Techniques",
+    "fundamentalBio": "Fundamental Biology",
+    "appliedBio": "Applied Biology & Biotechnology",
     "csv": "CSV (Computer System Validation)",
-    "iso": "ISO standards",
-    "titreHobby": "Hobbies "
+    "iso": "ISO Standards",
+    "titreHobby": "My Hobbies"
   },
+
   "diplomes": {
     "pageTitle": "Degrees",
 
@@ -121,10 +150,11 @@
       "location": "Montpellier - France",
       "description": "Licence internship",
       "contenu": [
-        "Study of three species: <i>Xanthomonas translucens</i>, <i>Xanthomonas albilineans</i>, and <i>Xanthomonas hortorum</i>",
-        "Prediction of CRISPR loci, phylogenetic tree construction, and spacer comparison",
-        "Python and Bash scripts for process automation",
-        "<u>Tools</u>: CRISPRCasFinder, FastANI, MEGA11, BLAST, Galaxy"
+        "<strong>Study of three species</strong>: <i>Xanthomonas translucens</i>, <i>Xanthomonas albilineans</i>, and <i>Xanthomonas hortorum</i>",
+        "<strong>Genomic analysis</strong>: Prediction of CRISPR loci and spacer comparison across three pathogenic species",
+        "<strong>Phylogeny</strong>: Reconstruction of evolutionary trees using MEGA11 to trace the history of bacterial defense systems",
+        "<strong>Automation</strong>: Development of Python and Bash scripts for high-throughput data processing (file parsing, tool automation)",
+        "<u>Technical stack</u>: CRISPRCasFinder, FastANI, BLAST, MEGA11, Galaxy"
       ]
     },
     "exp4": {
@@ -134,10 +164,11 @@
       "location": "Saint-Gènes-Champanelle - France",
       "description": "D.U.T internship",
       "contenu": [
-        "Analysis of a comparative genomics study on 22 human bacterial strains (PacBio Sequel II)",
-        "Phylogenetic analysis and screening of virulence and antibiotic resistance genes",
-        "Python scripting and Conda environments",
-        "<u>Tools</u>: Prokka, Roary, OrthoANI, RGI, VFDB"
+        "<strong>Omics pipeline</strong>: Analysis of PacBio Sequel II sequencing data for the study of 22 clinical bacterial strains",
+        "<strong>Annotation & Pangenome</strong>: Pangenome reconstruction (Roary) and automated annotation (Prokka) to identify essential genes",
+        "<strong>Health safety</strong>: Targeted search for virulence factors (VFDB) and antibiotic resistance genes (RGI/CARD)",
+        "<strong>Environment</strong>: Reproducibility management via Conda and Python processing scripts",
+        "<u>Technical stack</u>: PacBio Sequel II, Roary, Prokka, VFDB, RGI/CARD, Conda, Python"
       ]
     }
   },

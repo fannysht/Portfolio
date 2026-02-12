@@ -1,21 +1,14 @@
-// Skills component
-
 import React from "react";
 import "../styles/index.css";
 import { useTranslation } from "react-i18next";
 import useScrollReveal from "./useScrollReveal";
 import {
-  FaReact,
-  FaNodeJs,
-  FaDatabase,
-  FaCloud,
-  FaTools,
-  FaUsers,
-  FaPalette,
   FaDna,
-  FaMicroscope,
+  FaDatabase,
   FaFlask,
-  FaProjectDiagram
+  FaMicroscope,
+  FaProjectDiagram,
+  FaCode,
 } from "react-icons/fa";
 
 export default function Skills() {
@@ -24,116 +17,72 @@ export default function Skills() {
 
   const skillCategories = [
     {
-      title: "Front-End",
-      icon: FaReact,
-      skills: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "React.js",
-        "Vue.js",
-        "Bootstrap",
-        "Vite",
-        "Git / GitHub / GitLab",
-      ],
-    },
-    {
-      title: "Back-End",
-      icon: FaNodeJs,
-      skills: [
-        "Node.js",
-        "Python",
-        "PHP (Symfony)",
-        "Java",
-        "API REST",
-        "Android Studio",
-      ],
-    },
-    {
-      title: t("home.titreBDD"),
-      icon: FaDatabase,
-      skills: ["MySQL", "SQLite", "Oracle DB", "PostgreSQL", "MongoDB"],
-    },
-    {
-      title: t("home.titreCloud"),
-      icon: FaCloud,
-      skills: ["Docker", "Grafana", "ELK Stack", "CI/CD", "Azure DevOps"],
-    },
-    {
-      title: t("home.titreQualite"),
-      icon: FaTools,
-      skills: ["Pytest", "PHPUnit", "JUnit", "Selenium"],
-    },
-    {
-      title: t("home.titreCollab"),
-      icon: FaUsers,
-      skills: [
-        "Jira",
-        "Trello",
-        "Notion",
-        "Slack",
-        "Confluence",
-        "Power BI",
-        t("home.suiteOffice"),
-        "LaTeX",
-      ],
-    },
-    {
-      title: t("home.titreDesign"),
-      icon: FaPalette,
-      skills: [
-        "Figma",
-        "Canva",
-        "Krita",
-        "Piano Analytics",
-        "Google Analytics",
-      ],
-    },
-    {
-      title: t("home.titreBioinfo"),
+      title: t("home.bioinfOmicsTitle"),
       icon: FaDna,
       skills: [
-        "Galaxy",
-        "Geo2R Sequencing",
-        "R",
-        "BLAST",
-        "Mega",
-        "NCBI",
-        "Cytoscape",
-        "Clustal Omega",
-        "DESeq2",
-        "ChimeraX",
-        "IGV (Integrative Genomics Viewer)",
-        "Conda / Bioconda",
+        { main: t("home.analysesRNA"), details: "DESeq2, Geo2R" },
+        { main: t("home.genomics"), details: "BLAST, NCBI, Mega, Clustal Ω" },
+        {
+          main: t("home.pipelinesWorkflows"),
+          details: "Snakemake, Conda, Galaxy",
+        },
+        { main: t("home.visualization"), details: "Cytoscape, IGV, ChimeraX" },
+        { main: t("home.structOmics"), details: null },
       ],
     },
     {
-      title: t("home.titreBiologie"),
-      icon: FaMicroscope,
+      title: t("home.devWebTitle"),
+      icon: FaCode,
       skills: [
-        t("home.labAnalysis"),
-        t("home.labTechniques"),
-        t("home.fundamentalBio"),
-        t("home.microImmuno"),
-        t("home.appliedBio"),
-        t("home.evolSystem"),
-        t("home.structOmics"),
+        { main: "Python", details: "Pandas, NumPy, Pytest" },
+        { main: "R", details: t("home.statsGraphics") },
+        { main: "JavaScript", details: "React.js, Vue.js, Node.js" },
+        { main: "PHP", details: "Symfony" },
+        { main: t("home.javaApi"), details: null },
       ],
     },
     {
-      title: t("home.titreLaboratoire"),
+      title: t("home.dataCloudTitle"),
+      icon: FaDatabase,
+      skills: [
+        {
+          main: t("home.titreBDD"),
+          details: "PostgreSQL, MySQL, MongoDB, Oracle, SQLite",
+        },
+        { main: t("home.containerization"), details: "Docker" },
+        { main: "CI/CD & DevOps", details: "Azure, GitLab, GitHub" },
+        { main: "Monitoring", details: "Grafana, ELK Stack" },
+      ],
+    },
+    {
+      title: t("home.qualityLabTitle"),
       icon: FaFlask,
       skills: [
-        "GMP / GLP",
-        "GAMP5",
-        t("home.csv"),
-        "LIMS (Laboratory Information Management System)",
+        { main: t("home.dataManagement"), details: "LIMS" },
+        { main: t("home.systemValidation"), details: "CSV, GAMP5" },
+        { main: t("home.regulatoryCompliance"), details: "GMP / GLP" },
+        { main: t("home.titreQualite"), details: "Selenium, JUnit" },
       ],
     },
     {
-      title: t("home.titreGestion"),
+      title: t("home.lifeSciencesTitle"),
+      icon: FaMicroscope,
+      skills: [
+        { main: t("home.microImmuno"), details: null },
+        { main: t("home.labAnalysisTechniques"), details: null },
+        { main: t("home.molBioGenetics"), details: null },
+        { main: t("home.evolSystem"), details: null },
+      ],
+    },
+    {
+      title: t("home.managementAnalysisTitle"),
       icon: FaProjectDiagram,
-      skills: ["Agile", t("home.iso")],
+      skills: [
+        { main: t("home.titreGestion"), details: t("home.agileScrum") },
+        { main: "Data Viz", details: "Power BI, Piano/Google Analytics" },
+        { main: "Design", details: "Figma, Canva, Krita" },
+        { main: t("home.scientificWriting"), details: "LaTeX" },
+      ],
     },
   ];
 
@@ -145,19 +94,22 @@ export default function Skills() {
           const BgIcon = category.icon;
           return (
             <div className="skills-category" key={idx}>
-              {/* Icône de fond */}
               <div className="category-icon-bg">
                 <BgIcon className="bg-icon" />
               </div>
 
-              {/* Header avec icône principale et titre */}
               <div className="category-header">
                 <h3>{category.title}</h3>
               </div>
 
               <ul>
                 {category.skills.map((skill, i) => (
-                  <li key={i}>{skill}</li>
+                  <li key={i}>
+                    <strong>{skill.main}</strong>
+                    {skill.details && (
+                      <span className="skill-details"> ({skill.details})</span>
+                    )}
+                  </li>
                 ))}
               </ul>
             </div>

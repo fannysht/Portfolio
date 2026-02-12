@@ -11,27 +11,56 @@
     "titre": "Bonjour, je suis",
     "descr": "Développeuse Full Stack spécialisée en bioinformatique, passionnée par le traitement de données et la création de solutions web",
     "skillsTitre": "Mes compétences",
+
+    "bioinfOmicsTitle": "Bioinformatique & Omics",
+    "analysesRNA": "Analyse RNA-seq",
+    "genomics": "Génomique",
+    "pipelinesWorkflows": "Pipelines & Workflows",
+    "visualization": "Visualisation",
+    "structOmics": "Biologie structurale & omiques",
+
+    "devWebTitle": "Développement & Web",
+    "statsGraphics": "Statistiques & Graphiques",
+    "javaApi": "Java & Architecture API REST",
+
+    "dataCloudTitle": "Data Engineering & Cloud",
     "titreBDD": "Bases de données",
+    "containerization": "Conteneurisation",
+
+    "qualityLabTitle": "Qualité & Lab IT",
+    "dataManagement": "Gestion de données",
+    "systemValidation": "Validation de systèmes",
+    "regulatoryCompliance": "Conformité réglementaire",
+    "titreQualite": "Assurance qualité",
+
+    "lifeSciencesTitle": "Sciences de la Vie",
+    "microImmuno": "Microbiologie & Immunologie",
+    "labAnalysisTechniques": "Analyses & Techniques de laboratoire",
+    "molBioGenetics": "Biologie moléculaire & génétique",
+    "evolSystem": "Biologie évolutive & systématique",
+
+    "managementAnalysisTitle": "Gestion & Analyse",
+    "titreGestion": "Gestion de projets",
+    "agileScrum": "Agile, Normes ISO, Scrum",
+    "projectTools": "Jira, Notion",
+    "scientificWriting": "Rédaction scientifique",
+
     "titreCloud": "Cloud / Déploiement",
-    "titreQualite": "Tests / Assurance qualité",
     "titreCollab": "Collaboration & Productivité",
     "titreDesign": "Design & Analyse",
     "titreBioinfo": "Bioinformatique",
     "titreBiologie": "Biologie",
     "titreLaboratoire": "Laboratoire et règlements",
-    "titreGestion": "Gestion de projets",
     "suiteOffice": "Suite Office (Word, Excel, PowerPoint...)",
     "labAnalysis": "Analyse de laboratoire",
     "labTechniques": "Techniques de laboratoire",
     "fundamentalBio": "Biologie fondamentale",
-    "microImmuno": "Microbiologie et immunologie",
     "appliedBio": "Biologie appliquée et biotechnologie",
-    "evolSystem": "Biologie évolutive et systématique",
-    "structOmics": "Biologie structurale et omiques",
     "csv": "CSV (Validation des systèmes informatisés)",
     "iso": "Normes ISO",
     "titreHobby": "Mes passions"
   },
+
   "diplomes": {
     "pageTitle": "Diplômes",
     "master2Title": "Master 2 génie physiologique, biotechnologique et informatique (GPHY)",
@@ -119,10 +148,11 @@
       "location": "Montpellier - France",
       "description": "Stage de licence 3",
       "contenu": [
-        "Étude de trois espèces: <i>Xanthomonas translucens</i>, <i>Xanthomonas albilineans</i>, et <i>Xanthomonas hortorum</i>",
-        "Prédiction des loci CRISPR, construction d’arbres phylogénétiques et comparaison des spacers",
-        "Scripts Python et Bash pour l’automatisation des processus",
-        "<u>Outils</u>: CRISPRCasFinder, FastANI, MEGA11, BLAST, Galaxy"
+        "<strong>Étude de trois espèces</strong>: <i>Xanthomonas translucens</i>, <i>Xanthomonas albilineans</i>, et <i>Xanthomonas hortorum</i>",
+        "<strong>Analyse génomique</strong>: Prédiction de loci CRISPR et comparaison de spacers chez les trois espèces pathogènes",
+        "<strong>Phylogénie</strong>: Reconstruction d'arbres évolutifs sous MEGA11 pour tracer l'histoire des systèmes de défense bactériens",
+        "<strong>Automatisation</strong>: Développement de scripts Python et Bash pour le traitement haut débit des données (parsing de fichiers, automatisation des outils)",
+        "<u>Stack technique</u>: CRISPRCasFinder, FastANI, BLAST, MEGA11, Galaxy"
       ]
     },
     "exp4": {
@@ -132,10 +162,11 @@
       "location": "Saint-Gènes-Champanelle - France",
       "description": "Stage de D.U.T",
       "contenu": [
-        "Analyse d'une etude de génomique comparative sur 22 souches bactériennes humaines (PacBio Sequel II)",
-        "Analyse phylogénétique et recherche de gènes de virulence / antibiorésistance",
-        "Scripts Python et environnements Conda",
-        "<u>Outils</u>: Prokka, Roary, OrthoANI, RGI, VFDB"
+        "<strong>Pipeline omique</strong>: Analyse de données issues de séquençage PacBio Sequel II pour l'étude de 22 souches bactériennes cliniques",
+        "<strong>Annotation & Pangenome</strong>: Reconstruction du pangenome (Roary) et annotation automatisée (Prokka) pour identifier les gènes essentiels",
+        "<strong>Sécurité sanitaire</strong>: Recherche ciblée de facteurs de virulence (VFDB) et de gènes de résistance aux antibiotiques (RGI/CARD)",
+        "<strong>Environnement</strong>: Gestion de la reproductibilité via Conda et scripts de traitement Python",
+        "<u>Stack technique</u>: PacBio Sequel II, Roary, Prokka, VFDB, RGI/CARD, Conda, Python"
       ]
     }
   },

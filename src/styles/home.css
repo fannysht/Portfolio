@@ -15,7 +15,9 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
-  transition: padding-top 0.3s ease, margin-top 0.3s ease;
+  transition:
+    padding-top 0.3s ease,
+    margin-top 0.3s ease;
 }
 
 /* Background Bulles */
@@ -398,7 +400,9 @@
   border-radius: 20px;
   padding: 10px 20px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
   word-wrap: break-word;
 }
 .category-icon-bg {
@@ -477,7 +481,9 @@
   padding-left: 26px;
   font-size: clamp(0.9rem, 1.5vw, 1rem);
   margin-bottom: 8px;
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
 }
 .skills-category li::before {
   content: "➤";
@@ -660,7 +666,20 @@
   transform: scale(1.2);
   opacity: 1;
 }
+.skills-category li {
+  margin-bottom: 12px;
+}
 
+.skills-category li strong {
+  font-weight: 600;
+  color: var(--primary-color, #333);
+}
+
+.skill-details {
+  font-weight: 400;
+  color: var(--secondary-color, #666);
+  font-size: 0.9em;
+}
 /* =========================================
                 Responsives
    ========================================= */
